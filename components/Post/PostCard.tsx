@@ -1,20 +1,20 @@
 import Link from "next/link";
 import { Card, Figure, Title, Excerpt } from "./PostCardStyle";
+import { Post } from "../../shared/types";
 
-export const PostCard = () => {
+type PostCardProps = {
+  post: Post;
+};
+
+export const PostCard = ({ post }: PostCardProps) => {
   return (
-    <Link legacyBehavior href="/post/example" passHref>
+    <Link legacyBehavior href={`/post/${post.id}`} passHref>
       <Card>
         <Figure>
-          <img alt="Post photo" src="/image1.jpg" />
+          <img alt={post.title} src={post.image} />
         </Figure>
-        <Title>Post title!</Title>
-        <Excerpt>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </Excerpt>
+        <Title>{post.title}</Title>
+        <Excerpt>{post.lead}</Excerpt>
       </Card>
     </Link>
   );
