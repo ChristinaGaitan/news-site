@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { Card, Excerpt, Figure, Title } from "./PostCardStyle";
+import { Card, Figure, Title, Excerpt } from "./PostCardStyle";
 
 export const PostCard = () => {
   return (
-    <Link href="post/example" passHref>
+    <Link legacyBehavior href="/post/example" passHref>
       <Card>
         <Figure>
           <img alt="Post photo" src="/image1.jpg" />

@@ -1,5 +1,5 @@
 import { Center } from "../Center";
-import { Container } from "../Header/style";
+import { Container } from "./style";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,5 +10,5 @@ export const Footer = () => {
         <a href="https://christinagaitan.dev">Christina</a> {currentYear}
       </Center>
     </Container>
-  )
-}
+  );
+};

@@ -11,11 +11,12 @@ export const Container = styled.header`
 
   background-color: white;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-`
+`;
+
 export const Logo = styled.h1`
   font-size: 1.6rem;
   font-family: ${(p) => p.theme.fonts.accent};
-  
+
   a {
     text-decoration: none;
     color: black;
@@ -24,4 +25,4 @@ export const Logo = styled.h1`
   a:hover {
     color: ${(p) => p.theme.colors.pink};
   }
-`
+`;

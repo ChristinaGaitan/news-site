@@ -1,17 +1,17 @@
-import Link from "next/link"
-import { Center } from "../Center"
-import { Container, Logo } from "./style"
+import Link from "next/link";
+import { Center } from "../Center";
+import { Container, Logo } from "./style";
 
 export const Header = () => {
-  return(
+  return (
     <Container>
       <Center>
         <Logo>
-          <Link href="/">
+          <Link legacyBehavior href="/">
             <a>What's Next?!</a>
           </Link>
         </Logo>
       </Center>
     </Container>
-  )
-}
+  );
+};
