@@ -1,0 +1,11 @@
+{
+  "name": "news-site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "nex": "^2.0.22",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
