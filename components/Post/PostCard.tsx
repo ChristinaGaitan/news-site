@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Card, Figure, Title, Excerpt } from "./PostCardStyle";
+import { Card, Figure, Title, Excerpt, CardContainer } from "./PostCardStyle";
 import { Post } from "../../shared/types";
 
 type PostCardProps = {
@@ -8,14 +8,16 @@ type PostCardProps = {
 
 export const PostCard = ({ post }: PostCardProps) => {
   return (
-    <Link legacyBehavior href={`/post/${post.id}`} passHref>
-      <Card>
-        <Figure>
-          <img alt={post.title} src={post.image} />
-        </Figure>
-        <Title>{post.title}</Title>
-        <Excerpt>{post.lead}</Excerpt>
-      </Card>
-    </Link>
+    <CardContainer>
+      <Link href={`/post/${post.id}`} passHref>
+        <Card>
+          <Figure>
+            <img alt={post.title} src={post.image} />
+          </Figure>
+          <Title>{post.title}</Title>
+          <Excerpt>{post.lead}</Excerpt>
+        </Card>
+      </Link>
+    </CardContainer>
   );
 };

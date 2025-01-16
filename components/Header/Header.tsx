@@ -7,8 +7,8 @@ export const Header = () => {
     <Container>
       <Center>
         <Logo>
-          <Link legacyBehavior href="/">
-            <a>What's Next?!</a>
+          <Link href="/">
+            <p>What's Next?!</p>
           </Link>
         </Logo>
       </Center>

@@ -17,6 +17,10 @@ export const Logo = styled.h1`
   font-size: 1.6rem;
   font-family: ${(p) => p.theme.fonts.accent};
 
+  p {
+    margin: 0;
+  }
+
   a {
     text-decoration: none;
     color: black;

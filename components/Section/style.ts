@@ -34,7 +34,7 @@ export const Title = styled.h2`
   }
 `;
 
-export const MoreLink = styled.a`
+export const MoreLink = styled.p`
   margin: -20px 0 30px;
   display: inline-block;
   vertical-align: top;
