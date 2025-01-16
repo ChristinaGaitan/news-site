@@ -5,12 +5,15 @@ import { Post } from "../shared/types";
 
 const categories = require("./categories.json");
 const posts = require("./posts.json");
+const comments = require("./comments.json");
 const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
 
 const port = 4000;
+
+// const found = posts.filter(({ category: id }: Post) => id === req.params.id);
 
 app.get("/posts", (_, res) => {
   return res.json(posts);
@@ -33,6 +36,13 @@ app.get("/categories/:id", (req, res) => {
   const categoryPosts = [...found];
 
   return res.json(categoryPosts);
+});
+
+app.get("/comments/:post", (req, res) => {
+  const postId = Number(req.params.post);
+  const found = comments.filter(({ post }) => post === postId);
+
+  return res.json(found);
 });
 
 app.listen(port, () =>
