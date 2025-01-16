@@ -1,12 +1,13 @@
 import { FormEvent, useState } from "react";
 import { EntityId } from "../../shared/types";
 import { Form } from "./style";
+import { submitComment } from "../../api/comments/submit";
 
 type CommentFormProps = {
   post: EntityId;
 };
 
-export const CommentForm: React.FC<CommentFormProps> = ({}) => {
+export const CommentForm: React.FC<CommentFormProps> = ({ post }) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [value, setValue] = useState<string>("");
   const [name, setName] = useState<string>("");
@@ -15,7 +16,7 @@ export const CommentForm: React.FC<CommentFormProps> = ({}) => {
     e.preventDefault();
     setLoading(true);
 
-    const { status } = await submitComment(postMessage, name, value);
+    const { status } = await submitComment(post, name, value);
     setLoading(false);
 
     if (status === 201) {
