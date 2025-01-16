@@ -30,7 +30,7 @@ app.get("/posts/:id", (req, res) => {
 app.get("/categories/:id", (req, res) => {
   const { id } = req.params;
   const found = posts.filter(({ category }: Post) => category === id);
-  const categoryPosts = [...found, ...found, ...found];
+  const categoryPosts = [...found];
 
   return res.json(categoryPosts);
 });
