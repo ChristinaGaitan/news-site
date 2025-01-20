@@ -45,7 +45,7 @@ app.get("/comments/:post", (req, res) => {
   return res.json(found);
 });
 
-app.post("/post/:id/comments", (req, res) => {
+app.post("/posts/:id/comments", (req, res) => {
   const postId = Number(req.params.id);
   comments.push({
     id: comments.length + 1,
